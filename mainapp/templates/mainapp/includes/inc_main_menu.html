@@ -5,3 +5,12 @@
        {% if 'products' in request.resolver_match.namespaces  %} class="active" {% endif %}>продукты </a></li>
 <li><a href="{% url 'contact' %}"
        {% if request.resolver_match.url_name == 'contact' %} class="active" {% endif %}>контакты</a></li>
+{% if  user.is_authenticated %}
+<li><a href="{% url 'auth:edit'%}">
+    {{user.username|default:"Пользователь"}}
+    </a></li>
+
+<li><a href="{% url 'auth:logout' %}">выход</a></li>
+{% else %}
+<li><a href="{% url 'auth:login' %}">вход</a></li>
+{% endif %}

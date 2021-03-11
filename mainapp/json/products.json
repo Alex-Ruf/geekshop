@@ -1,0 +1,46 @@
+[{
+  "category": "дом",
+  "name": "комфорт 1",
+  "image": "products_images/product-1.jpg",
+  "short_desc": "комфортный стул",
+  "description": "подойдет для просмотра фильмов",
+  "price": "3323.2",
+  "quantity": "17"
+  },
+ {
+  "category": "дом",
+  "name": "комфорт 2",
+  "image": "products_images/product-2.jpg",
+  "short_desc": "очень комфортный стул",
+  "description": "подойдет для общения с друзьями",
+  "price": "2223.2",
+  "quantity": "13"
+  },
+  {
+  "category": "дом",
+  "name": "люкс",
+  "image": "products_images/product-3.jpg",
+  "short_desc": "использованы премальные материалы",
+  "description": "для тех, кто стремится к лучшему",
+  "price": "5223.2",
+  "quantity": "34"
+  },
+   {
+  "category": "офис",
+  "name": "стандарт",
+  "image": "products_images/product-4.jpg",
+  "short_desc": "универсальное решение",
+  "description": "подойдет для офиса",
+  "price": "1223.2",
+  "quantity": "143"
+  },
+  {
+  "category": "офис",
+  "name": "премиум",
+  "image": "products_images/product-5.jpg",
+  "short_desc": "универсальное решение",
+  "description": "подойдет для офиса",
+  "price": "1223.2",
+  "quantity": "143"
+  }
+]
