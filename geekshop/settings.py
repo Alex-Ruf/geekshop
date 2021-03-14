@@ -26,7 +26,7 @@ SECRET_KEY = '#r@g46(!2r+*^oourvn4ms4swjq5(ch135n(-a5z@g#v2ur5l$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.136','127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'mainapp',
     'authapp',
+    'basketapp',
 
 ]
 
