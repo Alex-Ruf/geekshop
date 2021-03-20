@@ -309,26 +309,28 @@ html, body {
 .search {
 	display: block;
 	width: 23px;
-	height: 23px;	
+	height: 23px;
 	background-image: url(/static/img/search.png);
 	position: absolute;
 	top: 63px;
-	left: 1176px;
+	left: 1145px;
 }
 .basket {
 	display: block;
 	width: 23px;
-	height: 23px;	
+	height: 23px;
 	background-image: url(/static/img/basket.png);
 	position: absolute;
 	top: 63px;
-	left: 1210px;
+	left: 1170px;
     text-decoration: none;
     color: #555;
+
 }
 
 .basket span {
 	margin-left: 25px;
+
 }
 
 .clearfix:after {
