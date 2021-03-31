@@ -239,19 +239,38 @@ class CategoryDeleteView(DeleteView):
 class ProductCreateView(CreateView):
     model = Product
     template_name = 'adminapp/product_update.html'
+
     form_class = ProductEditForm
+
+    def get_success_url(self, **kwargs):
+        cat_pk = self.object.category.pk
+        return reverse_lazy('admin:products', args=[cat_pk])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category = self.get_object().category.pk
+        context['category'] = category
+        title = 'Редактирование товара'
+        context['title'] = title
+        return context
 
     @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
-    def get_success_url(self):
-        category_pk = self.get_object().category.pk
-        return reverse_lazy('admin:product_create', args=[category_pk])
 
 
-#
-# @user_passes_test(lambda u: u.is_superuser)
+    # def get_context_data(self, **kwargs):
+    #     category_name = get_object_or_404(ProductCategory, pk=pk)
+    #     context = super().get_context_data(**kwargs)
+    #     context['category'] = category_name
+    #
+    #     return context
+
+
+
+
+    # @user_passes_test(lambda u: u.is_superuser)
 # def product_create(request, pk):
 #     category_item = get_object_or_404(ProductCategory, pk=pk)
 #     if request.method == 'POST':
