@@ -9,7 +9,7 @@ from mainapp.models import Product, ProductCategory
 
 def main(request):
     products = Product.objects.all()[:4]
-    content = {'title': 'Главная', 'products': products, 'basket': get_basket(request.user) }
+    content = {'title': 'Главная', 'products': products, }
     return render(request, 'mainapp/index.html', content)
 
 
@@ -23,11 +23,6 @@ def get_same_products(hot_product):
     return same_products
 
 
-def get_basket(user):
-    basket = []
-    if user.is_authenticated:
-         return Basket.objects.filter(user=user)
-    return []
 
 
 def products(request, pk=None):
@@ -54,7 +49,7 @@ def products(request, pk=None):
             'links_menu': links_menu,
             'products': products_paginator,
             'category': category_item,
-            'basket': get_basket(request.user)
+
 
         }
         return render(request, 'mainapp/products_list.html', content)
@@ -65,7 +60,6 @@ def products(request, pk=None):
     content = {
         'title': 'Продукты',
         'links_menu': links_menu,
-        'basket': get_basket(request.user),
         'hot_product': hot_product,
         'same_products': same_products
     }
@@ -80,7 +74,7 @@ def product(request, pk):
         'product': get_object_or_404(Product, pk=pk),
 
         'links_menu': ProductCategory.objects.all(),
-        'basket': get_basket(request.user)
+
     }
     return render(request, 'mainapp/product.html', content)
 

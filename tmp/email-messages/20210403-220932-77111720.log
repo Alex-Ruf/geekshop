@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGRqYW5nbzU=?=
+From: webmaster@localhost
+To: DJ5@local.bg
+Date: Sat, 03 Apr 2021 19:09:32 -0000
+Message-ID: <161747697220.11420.10250431400809327175@Alex-PC>
+
+Для подтверждения учетной записи django5 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/DJ5@local.bg/bc749e4bcb6de8da293fd39d70addec244df0cb2/
+-------------------------------------------------------------------------------

@@ -9,8 +9,8 @@
 
     <button class="new_product">
 
-        <a href="#">
-            новый продукт{{object_list.0.category.pk}}
+        <a href="{% url 'admin:product_create' category.pk %}">
+            новый продукт
         </a>
 
     </button>
@@ -52,6 +52,7 @@
         </div>
         <div class="product_desc">
             {{ object.short_desc|title }}
+
         </div>
     </div>
     {% endfor%}

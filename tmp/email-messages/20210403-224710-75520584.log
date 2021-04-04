@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGRqYW5nbzc=?=
+From: django@geekshop.local
+To: DJ7@local.bg
+Date: Sat, 03 Apr 2021 19:47:10 -0000
+Message-ID: <161747923045.9896.15682672294657250499@Alex-PC>
+
+Для подтверждения учетной записи django7 на портале http://127.0.0.1:8000 перейдите по ссылке: 
+http://127.0.0.1:8000/auth/verify/DJ7@local.bg/a389f12d095653ccc82290665ebaa5fa1a42f47a/
+-------------------------------------------------------------------------------

@@ -50,7 +50,7 @@ def basket_edit(request, pk, quantity):
 
         if quantity > 0:
             new_basket_item.quantity = quantity
-            new_basket_item.save()
+            new_basket_item.save
         else:
             new_basket_item.delete()
 
