@@ -10,9 +10,14 @@
         <input type="submit" value="войти" class="form-control">
     </form>
     <br>
-    <button class="btn btn-link form-control">
-        <a href="{% url 'auth:register' %}">
-            регистрация
-        </a>
-    </button>
+    <button class="btn btn-round form-control">
+    <a href="{% url 'auth:register' %}" class="">
+        Зарегистрироваться
+    </a>
+</button>
+<button class="btn btn-round form-control">
+    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+     Вход через ВКонтакте
+    </a>
+</button>
 {% endblock %}
