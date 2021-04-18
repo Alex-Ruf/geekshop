@@ -23,13 +23,16 @@ def basket(request):
 def basket_add(request, pk):
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('products:product', args=[pk]))
-    product_item = get_object_or_404(Product, pk=pk)
-    basket_item = Basket.objects.filter(product=product_item, user=request.user).first()
+    product = get_object_or_404(Product, pk=pk)
+    old_basket_item = Basket.get_product(product=product, user=request.user)
 
-    if not basket_item:
-        basket_item = Basket(user=request.user, product=product_item)
-    basket_item.quantity += 1
-    basket_item.save()
+    if old_basket_item:
+        old_basket_item[0].quantity += 1
+        old_basket_item[0].save()
+    else:
+        new_basket_item = Basket(user=request.user, product=product)
+        new_basket_item.quantity += 1
+        new_basket_item.save(update_fields=['quantity', 'product'])
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
