@@ -24,8 +24,10 @@ SECRET_KEY = '#r@g46(!2r+*^oourvn4ms4swjq5(ch135n(-a5z@g#v2ur5l$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.0.134', 'localhost']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['192.168.0.134', 'localhost']
 
 # Application definition
 
@@ -85,10 +87,15 @@ WSGI_APPLICATION = 'geekshop.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
+        'NAME': 'geekshop',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'django'
     }
 }
 
