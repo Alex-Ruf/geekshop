@@ -8,7 +8,7 @@ from mainapp.models import Product, ProductCategory
 
 
 def main(request):
-    products = Product.objects.all()[:4]
+    products = Product.objects.all().select_related('category')[:4]
     content = {'title': 'Главная', 'products': products, }
     return render(request, 'mainapp/index.html', content)
 
