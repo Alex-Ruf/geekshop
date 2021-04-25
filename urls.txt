@@ -1,4 +1,0 @@
-http://80.78.247.77/
-http://80.78.247.77/products/
-http://80.78.247.77/contact/
-http://80.78.247.77/products/category/1/
