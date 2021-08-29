@@ -6,6 +6,8 @@ from mainapp.models import ProductCategory, Product
 
 
 class ShopUserAdminEditForm(ShopUserEditForm):
+    discount = forms.IntegerField(label='скидка', required=False, min_value=0, max_value=90, initial=0)
+
     class Meta:
         model = ShopUser
         fields = '__all__'
