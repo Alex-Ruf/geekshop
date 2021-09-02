@@ -233,7 +233,7 @@ class CategoryDeleteView(DeleteView):
             self.object.is_active = False
         else:
             self.object.is_active = True
-        self.object.save
+        self.object.save()
         return HttpResponseRedirect(self.get_success_url())
 
 
@@ -403,7 +403,7 @@ class ProductDeleteView(DeleteView):
             self.object.is_active = False
         else:
             self.object.is_active = True
-        self.object.save
+        self.object.save()
         return HttpResponseRedirect(self.get_success_url())
 
 #

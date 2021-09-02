@@ -12,7 +12,7 @@
     {% endif %}
     {{ object}}?
 
-    <form action="{% url 'admin:product_delete' object.pk %}"
+    <form action="{% url 'admin:product_delete' object.pk  %}"
           method="post">
       {% csrf_token %}
       {% if object.is_active%}
