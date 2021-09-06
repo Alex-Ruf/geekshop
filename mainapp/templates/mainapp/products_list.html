@@ -22,17 +22,19 @@
         </div>
         <div class="category-products clearfix">
             {% for product in products %}
+                {% if product.is_active %}
                 <div class="block">
-                    <a href="{% url 'products:product' product.pk %}"><img src="/media/{{ product.image }}" alt="">
+                    <a href="{% url 'products:product' product.pk %}"><img src="/media/{{ product.image|default:'products_images/default.jpg' }}" alt="">
                         <div class="text">
-                            <img src="{% static 'img/icon-hover.png'%}" alt="img">
-                            <h4>Название: {{product.name}}</h4>
-                            <p>Описание: {{product.description}}</p>
-                            <p>Цена: {{product.price}} </p>
-                            <p>на складе: {{product.quantity}} </p>
+                            <img src="{% static 'img/icon-hover.png' %}" alt="img">
+                            <h4>Название: {{ product.name }}</h4>
+                            <p>Описание: {{ product.description }}</p>
+                            <p>Цена: {{ product.price }} </p>
+                            <p>на складе: {{ product.quantity }} </p>
                         </div>
                     </a>
                 </div>
+                {% endif %}
             {% endfor %}
 
         </div>

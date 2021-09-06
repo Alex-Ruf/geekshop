@@ -255,7 +255,7 @@ class CategoryDeleteView(DeleteView):
 
 class ProductCreateView(CreateView):
     model = Product
-    template_name = 'adminapp/product_update.html'
+    template_name = 'adminapp/product_create.html'
     form_class = ProductEditForm
 
 
@@ -273,8 +273,8 @@ class ProductCreateView(CreateView):
         return super().dispatch(request, *args, **kwargs)
 
     def get_success_url(self):
-
-        return reverse_lazy('adminapp:products', args= [self.kwargs['pk']])
+        category_pk = self.get_object().category.pk
+        return reverse_lazy('admin:products', args=[category_pk])
 
 
 
